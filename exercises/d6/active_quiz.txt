@@ -1,0 +1,11 @@
+What is a database?
+	An organized set of information.
+What is a database table? How does it relate to a database? What's a good analogy for a database table (i.e. a way to visualize it)?
+	Organizes data into rows and columns. It structures information contained in database
+Draw the tweets database table
+Why do we use models/resources at all?
+	To understand the structure of the database
+What is ActiveRecord?
+	Interface which makes development easier for developer, database clean, part of model in MVC.
+What's the difference between a database table, resource and an ActiveRecord model?
+	ActiveRecord associates class to database, makes it easy to pull records from database (StackOverFlow), resource model backed by another application's API, database table model backed by it's own database
