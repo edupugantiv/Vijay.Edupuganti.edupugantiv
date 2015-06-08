@@ -1,0 +1,25 @@
+What does the git init command do?
+	You use the git init command  in order to initialize a new Git repository from an existing set of files.
+What does git add do? How is it different from git commit?
+	git add allows one to move from the local working directory of the code you are working on to track/stage changes to those files. Git commit is used to move from staged changes to actually committing the changes to a local repository in the .git folder.
+What is the difference between staged and committed (or versioned) files?
+	Staged files are not in your local repository whereas the 
+What's the shortcut for adding all files and commiting them?
+	If you add "-a" to "git commit", it will allow you to skip the "git add" stage. It will "add" all files that are tracked.
+How do you unstage a staged file? How do you go back to an old version of a committed file?
+	You use git reset to unstage a staged file and git checkout to go back to the old version of a committed file.
+Why are commit messages very important?
+	It helps clarify why certain commits are being made as well as with version control among multiple programmers.
+How do I revert to a previous commit (i.e. go back to an earlier "draft")?
+	Use git checkout and the id of that "draft"/snapshot
+How do you exit out of vi? (Also called vim.)
+	Press the escape key
+
+What's the difference between GitHub and git? Could git exist without GitHub? Could GitHub exist without git?
+	Git is a revision control system (Stack Overflow) and Github is a hosted service that contains git repositories. Git can exist without Github, but Github cannot exist without git.
+Why is GitHub a cool company?
+	Good UI to work on a project with many people
+What does git push do?
+	Moves changes from local repository on machine to remote repository on Github
+What does git pull do? How is it different from/same as git fetch and git merge?
+	Gets a remote repository on Github and creates a working copy that one can modify on local machine
