@@ -1,0 +1,76 @@
+Again, we went over a lot of methods! Make sure you understand what each one returns, and whether they are a class or instance method. Look them up if you forgot—thankfully, Rails has really good documentation with APIDock.
+
+.all --> returns all matching records
+.first --> returns first matching record
+.new --> new object to be instantiated or set to certain conditions
+.find --> returns records that satisfy condition, returns single model object
+.find_by --> finds first record matching condition
+.where --> returns records that satisfy condition in argument, returns ActiveRecord relation (collection of model objects)
+.save --> saves the model
+.update_attributes --> updates attributes from argument and saves record
+.destroy --> destroys object w/ given ID
+What's the difference between .find and .find_by? one finds record by id, the other finds the first record that matches the condition 
+What's the difference between .where and .find_by? one returns relation (collection of model objects), the other returns first matching record
+
+
+Fire up rails console from within your 'twitter' rails app folder from class today. Then do the following things. After you're confident in your code, write the commands you wrote for each step in d7/activerecord_commands:
+
+Create a User with a name and followers count
+	new_user = User.new
+	new_user.name = "Vijay"
+	new_user.followers = 1000
+Find it with User.find. Assign the result to the variable user
+	User.find(5) # index of user
+	user = User.find(5)
+Find it by name with User.find_by
+	User.find_by(name = "Vijay")
+Write a command that finds all the users with followers count equal to 10.
+	User.find_by(followers = 10)
+Update user from step 2 to have a different name. Make sure to save!
+	user.name = "VJ"
+	user.save
+Create a Tweet for this user. Assign the correct user_id, and make sure to save.
+	tweet = Tweet.new
+	tweet.user_id = 5
+Update the tweet from step 6 to have a different body.
+	tweet.body = "Hey man"
+Destroy it.
+	tweet.destroy
+
+
+A bit harder now:
+
+Create 10 users programmatically, each with a different name. Use a loop—you might want to write pseudo-code first!
+i = 0
+while (i < 10)
+	new_user = User.new
+	new_user.name = "VJ" + i_to_s
+	new_user.save
+	i = i + 1
+end 
+
+Destroy them all
+i = 4 # Starting index of all newly created users
+while (i < 14)
+	User.find(i).destroy
+	i = i + 1
+end
+
+Create 10 tweets in a similar way.
+i = 0
+while (i < 10)
+	new_tweet = Tweet.new
+	new_tweet.save
+	i = i + 1
+end 
+
+Update all of them to have the body "Ruby is fat"
+i = 6 #Starting index of all newly created tweets from previous steps
+while (i < 16)
+	Tweet.find(i).body == "Ruby is fat"
+	i = i + 1
+end
+
+
+Update the fourth one to say "Ruby is getting even fatter"
+Tweet.find(10).body == "Ruby is getting even fatter"

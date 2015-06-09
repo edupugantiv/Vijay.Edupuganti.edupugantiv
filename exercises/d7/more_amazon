@@ -1,0 +1,17 @@
+Building off your amazon app from last time, go through our design process
+
+What routes (i.e. urls) make sense for interacting with your application for the actions you listed in Step 3 in 6B exercise 2? Let's call these our activities.
+What controller should each route go to? Does the activity always correlate nicely with a resource? If so, which one? If not, why not?
+What action in each controller should each activity go to? Is it something that shows a list of instances (index), shows a particular one (show), creates one (create), updates one (update) or deletes one (delete)?
+Draw a full map url -> controller -> action for each activity.
+
+	users/edit/id, to edit username and password --> UserController --> update
+	users/edit/settings, to edit Settings --> UserController --> update
+
+	ShoppingCart/add, add item --> ShoppingCartController -->  create
+	ShoppingCart/delete, deletes item --> ShoppingCartController --> delete
+
+	items/price, displays price of item --> ItemController --> show
+	items/stock_quantity, shows amount of item left --> ItemController --> show
+
+
