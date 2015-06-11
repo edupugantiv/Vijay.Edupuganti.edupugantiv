@@ -1,0 +1,14 @@
+<h1>Reddit Stories</h1>
+
+<p>
+
+<% @stories.each do |story| %>
+	<ul>
+	<%= story.title %><br/>
+	<%= link_to 'Show', "/stories/#{story.id}" %>
+	</ul>
+<% end %>
+
+<%= link_to 'Create', "/stories/new" %>
+
+</p>

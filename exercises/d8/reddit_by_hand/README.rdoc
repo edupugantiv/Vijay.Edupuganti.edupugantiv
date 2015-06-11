@@ -1,0 +1,34 @@
+== README
+
+E1:
+
+At a high level, what is a migration?
+	Migrations are ruby scripts that tell application how to make a set of changes to your database. Once you run migration, changes are applied to database
+
+What is the code to generate a migration?
+	rails g (or rails generate)
+
+What is the code to run a migration?
+	rake db:migrate is used to run all pending migrations
+
+If I just generated a migration create_stories, next added a new field t.string:author in my migration file, and then ran the migration, what does it to do my table?
+	It adds a column (of type string) to the table which would display all the authors of each story
+
+What happens if you add fields to a migration after you run it? Are those change reflected on the database table? Why or why not?
+	No they are not. You must use change_column to alter any of the columns
+
+
+Seeds
+
+What is a seeds file?
+	A seeds file is a place to put test data
+Where does it live?
+	seds.rb in db
+What is it good for?
+	Don't have to use forms or rails console, can just store data temporarily 
+How do I run it?
+	rake db:seed
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
