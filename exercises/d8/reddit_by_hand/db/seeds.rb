@@ -10,9 +10,7 @@ Category.destroy_all
 Story.destroy_all
 
 user = User.create(name: "Vijay", user_name: "vijaye")
-
 category = Category.create(name: "movies")
-
 story_1 = Story.create(title: "Birdman", body: "Best movie", user_id: user.id, category_id: category.id)
 story_2 = Story.create(title: "Boyhood", body: "Amazing", user_id: user.id, category_id: category.id)
 story_3 = Story.create(title: "The Dark Knight", body: "Awesome", user_id: user.id, category_id: category.id)

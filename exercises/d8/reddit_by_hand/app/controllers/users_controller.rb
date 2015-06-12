@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params["user"].permit(:name , :user_name)
+		@user = User.new(params["user"].permit(:name , :user_name, :user_id, :category_id)
 		@user.save
 
 		redirect_to "/users"
