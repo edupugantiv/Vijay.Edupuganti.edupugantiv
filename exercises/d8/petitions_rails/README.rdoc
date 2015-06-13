@@ -1,0 +1,32 @@
+== README
+
+Why are we not using scaffolding? Why do we not want to use it all the time?
+We are not using scaffolding for many reasons. One is that we are hoping to uncover the hood to better understand how MVC works in Rails. Another is that often rails applications need to use something other than just CRUD. 
+
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

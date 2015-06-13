@@ -1,0 +1,11 @@
+<h1>Petitions</h1>
+
+<p>Hello! These are the top ten petitions on WhiteHouse.gov</p>
+
+<ol>
+<% @petitions.each do |petition| %>
+  <li><%= petition["title"]%>	<%= link_to 'Show', '/petitions/' + petition["id"].to_s %></li>
+<% end %>
+</ol>
+
+

@@ -1,0 +1,6 @@
+<h1> <%= @petition["title"] %> </h1>
+<%= @petition["body"] %></br>
+Signature Count: <%= @petition["signatureCount"] %></br>
+Deadline: <%= Time.at(@petition["deadline"]) %></br>
+Status: <%= Time.at(@petition["created"]) %></br>
+URL: <%= @petition["url"] %></br>
