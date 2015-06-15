@@ -1,0 +1,26 @@
+<h1>Create a Reddit story </h1>
+
+
+<%= form_for Story.new do |f| %>
+
+<% if @story.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
+  </div>
+<% end %>
+
+
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
+
+  <%= f.label :body %>:
+  <%= f.text_field :body %><br />
+
+  <%= f.label :user_id %>:
+  <%= f.text_field :user_id %><br />
+
+  <%= f.label :category_id %>:
+  <%= f.text_field :category_id %><br />
+
+  <%= f.submit %>
+<% end %>
