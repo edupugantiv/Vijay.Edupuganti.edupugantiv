@@ -1,1 +1,13 @@
 <h1>Welcome to Pintrest!</h1>
+
+<p>
+<% @items.each do |item| %>
+	<ul>
+	<%= item.title %> (User ID: <%= item.user_id %><br/>
+	<%= link_to 'Show', "/stories/#{story.id}" %>
+	</ul>
+<% end %>
+</p>
+
+
+<%= link_to 'Create item', "items/new" %>
