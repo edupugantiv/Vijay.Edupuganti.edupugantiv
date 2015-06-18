@@ -1,12 +1,16 @@
 <h1>Welcome to Pintrest!</h1>
 
 <p>
-<% @items.each do |item| %>
-	<ul>
-	<%= item.title %> (User ID: <%= item.user_id %><br/>
-	<%= link_to 'Show', "/stories/#{story.id}" %>
-	</ul>
-<% end %>
+	<% if @items.any? %>
+		<% @items.each do |item| %>
+			<ul>
+			<%= item.title %> (User ID: <%= item.user_id %><br/>
+			<%= link_to 'Show', "/items/#{item.description}" %>
+			</ul>
+		<% end %>
+	<% else %>
+		<p> There are no items!</p>
+	<% end %>
 </p>
 
 

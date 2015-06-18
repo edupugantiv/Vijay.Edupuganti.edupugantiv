@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+
+	before_action :authenticate_user!
+
 	def new
 		@item = Item.new
 	end
@@ -9,7 +12,10 @@ class ItemsController < ApplicationController
 	
 	def create
 		@item = Item.new(params["item"].permit(:title, :description, :user_id))
-		@item.save
-		redirect_to '/items'
+		if @item.save
+			redirect_to '/items', notice: "Item created"
+		else
+			redirect_to '/items', notice: "Item not created"
+		end
 	end
 end
