@@ -1,0 +1,25 @@
+$primary-background-color: #D3D3D3;
+$secondary-background-color: #89CFF0;
+$primary-text-color: #595758;
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300);
+
+$primary-font-family: Roboto, sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: $primary-background-color;
+  color: $primary-text-color;
+  font-family: $primary-font-family;
+}
+
+#container {
+  background-color: $secondary-background-color;
+  width: 500px;
+  padding: 15px;
+  margin: 0px auto;
+  margin-top: 30px;
+  border-radius: 100%;
+}

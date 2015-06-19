@@ -4,8 +4,8 @@
 	<% if @items.any? %>
 		<% @items.each do |item| %>
 			<ul>
-			<%= item.title %> (User ID: <%= item.user_id %><br/>
-			<%= link_to 'Show', "/items/#{item.description}" %>
+			<%= item.title %><br/>
+			<%= link_to 'Show', "/items/#{item.id}" %>
 			</ul>
 		<% end %>
 	<% else %>

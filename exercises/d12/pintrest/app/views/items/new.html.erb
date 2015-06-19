@@ -1,14 +1,23 @@
 <h1>Create a new Pintrest item </h1>
 
-<%= form_for @item, :url => users_path, :html => { :multipart => true } do |f| %>
+<% if @item.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@item.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+    <ul>
+    <% @item.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @item, :url => items_path, :html => { :multipart => true } do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title %><br />
 
   <%= f.label :description %>:
   <%= f.text_field :description %><br />
-
-  <%= f.label :user_id %>:
-  <%= f.text_field :user_id %><br />
 
   <%= f.file_field :avatar %>
 
